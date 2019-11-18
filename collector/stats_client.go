@@ -115,13 +115,13 @@ func (cs clientStats) set(s *stats) {
 	}
 }
 
-func (cs clientStats) collect(out chan<- prometheus.Metric) {
+func (cs clientStats) Collect(out chan<- prometheus.Metric) {
 	for _, c := range cs {
 		c.vec.Collect(out)
 	}
 }
 
-func (cs clientStats) describe(ch chan<- *prometheus.Desc) {
+func (cs clientStats) Describe(ch chan<- *prometheus.Desc) {
 	for _, c := range cs {
 		c.vec.Describe(ch)
 	}

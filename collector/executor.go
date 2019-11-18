@@ -76,7 +76,7 @@ func (e *NsqExecutor) Use(c StatsCollector) {
 // Describe implements the prometheus.Collector interface.
 func (e *NsqExecutor) Describe(ch chan<- *prometheus.Desc) {
 	for _, c := range e.collectors {
-		c.describe(ch)
+		c.Describe(ch)
 	}
 }
 
@@ -106,7 +106,7 @@ func (e *NsqExecutor) Collect(out chan<- prometheus.Metric) {
 			c.set(stats)
 		}
 		for _, c := range e.collectors {
-			c.collect(out)
+			c.Collect(out)
 		}
 	}
 }

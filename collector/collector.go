@@ -6,7 +6,7 @@ import "github.com/prometheus/client_golang/prometheus"
 // from a nsqd exported stats data.
 type StatsCollector interface {
 	set(s *stats)
-	collect(out chan<- prometheus.Metric)
-	describe(ch chan<- *prometheus.Desc)
+	Collect(out chan<- prometheus.Metric)
+	Describe(ch chan<- *prometheus.Desc)
 	reset()
 }
