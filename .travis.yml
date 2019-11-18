@@ -1,27 +1,24 @@
 language: go
 go:
-  - 1.7
-
+- 1.7
 script:
-  - make build
-  - make test
-
+- make build
+- make test
 before_deploy: make release-build
-
 deploy:
   provider: releases
   api_key:
-    secure: dg0LYigX/6Ee2T8yVcamwoXyzxZxeb4t4foPE5D5UV9FnW4SFpGLe2pp+ip02YcF+Ky2e9XoCp2wUDbGbdmKw9dDtgxoX4IQPf/VADfp9jwxj/jdWVLLeP6dCH2oJenuFE/5RipWF1P/zwZhplArgb+R5HL6nlFslf9D3tgeENiRu8oDHF9OrvxIBp/QQFf+dmZWznovkmjdyw2HUOkOUX1ThoxNElV9DDNgeKuTTYU03hWiLgGV4T8EZtpNIrCG+hYbpA0Ul29TfGQIdGeKx0B2mVcawXIS57L3HC0R1KNRRAMMDcOdQ2xcAYp28NljNPFsFDU3Ym8X7cAhwMA5kc4SgKqwffeNHQiAVgoxnoiyGXiAg3M8q0+42dGpwBBQD480RFGKISkca7CGzxoJ2ymiVl6PcfTZnS0ixShjAIH5IA32zrmfxXBGLjlUGn7oIJM0GEYHrpykTpAlK2ZJ0C85HOOn789bk3F58CwljpDE0VufoynQZ5s7qdacu4eDTPBebfGeOh2FoFv+NCyl1qRHrQtU7eUtIADQgs6GTMKJPbeCCFPOLw7i8D9rxOeLJr1tLyvjVgJH0yHmzF3ePvzLUxmeeg5p3tPW02KCd9YBQl1RSGZYULE77/Q0/qy9H0bcvG3ZjK65kjt7NzWTEwM8tvXU8lcPgCdQDA0/kwQ=
+    secure: U/JM7jdSxbqYan39dirrWAuApRm3J/DmT3syIERQfWJNLfDpTDhCzK70wUbemcPrmz7eudIab8wcbRJs9dkO4iG87hrhejhbfH/K8Ajl4YV5+fhewPB5ZRpKIOHxlRUdM6lKqjcBAKNCQBetKAfGVJFafBnI7tKJQg0mrDfBWcJq1zvTzl8T/6S7OPqKDJWgvbmmcrHeWrXtGe07FD0qMFaMe5fhB3/orU4nfTbI5hoKjwH++o3D0sRfipzxqsnKJBi36MiEg95rBA+cjbKsVo6aneI9pIcfxWb95lRhS0oL7fQB4MEvoT3R+gPdrVATwFXQhl9M1D6bq7hWguwqgcSovL9+eibbvj21HIER9Wg6M343ewgdy346QqIuUn1wPLohgw8oCIqaw0jVncYJnlNonT3B4NR+IZdcTBR57F8sv3EbIc54KttBHh5E8SZJs6NsZSj13yILsQ2JXsjDq3u0DPpEuYkazRauyn6EUNNvTA+dkAvfS8+c1wgxkgKDSLiGR9FXp2iN3a1kETqJ1IbbOVZcX8YXhIJB95PgoQf5qjk1kju4tCZWkC/NFlXjk17jXAMlMT2PUk9LrXq+tp5FT9RMez7NKEKoVrsYzay+XRgRG3dHDk35Ipsw2N+BCOwARin9atEu96BTg1p2bFy2sifMD2kkJhqpBLUMfjI=
   file:
-    - build/nsq_exporter_darwin_amd64
-    - build/nsq_exporter_freebsd_386
-    - build/nsq_exporter_freebsd_amd64
-    - build/nsq_exporter_linux_386
-    - build/nsq_exporter_linux_amd64
-    - build/nsq_exporter_linux_arm
-    - build/nsq_exporter_linux_arm64
-    - build/nsq_exporter_windows_386.exe
-    - build/nsq_exporter_windows_amd64.exe
+  - build/nsq_exporter_darwin_amd64
+  - build/nsq_exporter_freebsd_386
+  - build/nsq_exporter_freebsd_amd64
+  - build/nsq_exporter_linux_386
+  - build/nsq_exporter_linux_amd64
+  - build/nsq_exporter_linux_arm
+  - build/nsq_exporter_linux_arm64
+  - build/nsq_exporter_windows_386.exe
+  - build/nsq_exporter_windows_amd64.exe
   on:
-    repo: lovoo/nsq_exporter
+    repo: pedro3692/nsq_exporter
     tags: true
