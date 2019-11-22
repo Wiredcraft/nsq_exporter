@@ -1,6 +1,6 @@
 # NSQ Exporter
 
-[![Build Status](https://travis-ci.org/pedro3692/nsq_exporter.svg?branch=master)](https://travis-ci.org/pedro3692/nsq_exporter) [![](https://images.microbadger.com/badges/image/pedro3692/nsq_exporter.svg)](https://microbadger.com/images/pedro3692/nsq_exporter "Get your own image badge on microbadger.com")
+[![Build Status](https://travis-ci.com/pedro3692/nsq_exporter.svg?branch=master)](https://travis-ci.com/pedro3692/nsq_exporter) 
 
 NSQ exporter for prometheus.io, written in go.
 
