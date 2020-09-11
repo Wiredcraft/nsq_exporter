@@ -1,12 +1,12 @@
 # NSQ Exporter
 
-[![Build Status](https://travis-ci.com/pedro3692/nsq_exporter.svg?branch=master)](https://travis-ci.com/pedro3692/nsq_exporter) 
+[![Build Status](https://travis-ci.com/Wiredcraft/nsq_exporter.svg?branch=master)](https://travis-ci.com/Wiredcraft/nsq_exporter) 
 
 NSQ exporter for prometheus.io, written in go.
 
 ## Usage
 
-    podman run --rm -d --name nsq_exporter -l nsqd:nsqd -p 9117:9117 pedro3692/nsq_exporter:latest -nsqd.addr=http://nsqd:4151 -collect=stats.topics,stats.channels,stats.clients
+    podman run --rm -d --name nsq_exporter -l nsqd:nsqd -p 9117:9117 Wiredcraft/nsq_exporter:latest -nsqd.addr=http://nsqd:4151 -collect=stats.topics,stats.channels,stats.clients
 
 ## Building
 
@@ -14,8 +14,8 @@ NSQ exporter for prometheus.io, written in go.
 
     OR
 
-    go get -u github.com/pedro3692/nsq_exporter
-    go install github.com/pedro3692/nsq_exporter
+    go get -u github.com/Wiredcraft/nsq_exporter
+    go install github.com/Wiredcraft/nsq_exporter
 
 ## Contributing
 

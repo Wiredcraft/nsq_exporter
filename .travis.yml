@@ -20,5 +20,5 @@ deploy:
   - build/nsq_exporter_windows_386.exe
   - build/nsq_exporter_windows_amd64.exe
   on:
-    repo: pedro3692/nsq_exporter
+    repo: Wiredcraft/nsq_exporter
     tags: true
